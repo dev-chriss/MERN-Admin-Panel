@@ -5,10 +5,14 @@ import Dialog from "@material-ui/core/Dialog";
 import DialogActions from "@material-ui/core/DialogActions";
 import DialogContent from "@material-ui/core/DialogContent";
 import DialogTitle from "@material-ui/core/DialogTitle";
-
 import { IconButton } from '@material-ui/core';
 import AddCircleIcon from '@material-ui/icons/AddCircle';
 import { toast } from 'react-toastify';
+import Grow from '@material-ui/core/Grow';
+
+const Transition = React.forwardRef(function Transition(props, ref) {
+  return <Grow ref={ref} {...props} />;
+});
 
 const initialFormState = { 
 	id: null, 
@@ -87,6 +91,7 @@ const FormDialogAddUser = (props) => {
       <Dialog  
         open={open}
         onClose={handleClose}
+        TransitionComponent={Transition}
         aria-labelledby="form-dialog-title"
       >
             <DialogTitle id="form-dialog-title" style={{padding: "30px 30px 0px 30px"}}>Add User</DialogTitle>

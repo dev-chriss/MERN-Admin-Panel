@@ -5,10 +5,14 @@ import DialogActions from "@material-ui/core/DialogActions";
 import DialogContent from "@material-ui/core/DialogContent";
 import DialogContentText from "@material-ui/core/DialogContentText";
 import DialogTitle from "@material-ui/core/DialogTitle";
-
 import { IconButton } from '@material-ui/core';
 import DeleteIcon from "@material-ui/icons/Delete";
 import { toast } from 'react-toastify';
+import Grow from '@material-ui/core/Grow';
+
+const Transition = React.forwardRef(function Transition(props, ref) {
+  return <Grow ref={ref} {...props} />;
+});
 
 const FormDialogDeleteUser = (props) => {
   const [open, setOpen] = useState(false);
@@ -45,6 +49,7 @@ const FormDialogDeleteUser = (props) => {
       <Dialog  
         open={open}
         onClose={handleClose}
+        TransitionComponent={Transition}
         aria-labelledby="form-dialog-title"
       >
             <DialogTitle id="form-dialog-title" style={{padding: "30px 30px 0px 30px"}}>Delete User</DialogTitle>
