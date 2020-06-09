@@ -3,10 +3,10 @@ import { Table, TableBody, TableCell, TableRow, Collapse, IconButton } from '@ma
 import KeyboardArrowDownIcon from '@material-ui/icons/KeyboardArrowDown';
 import KeyboardArrowUpIcon from '@material-ui/icons/KeyboardArrowUp';
 import { makeStyles } from '@material-ui/core/styles';
-import DeleteIcon from "@material-ui/icons/Delete";
 import EditIcon from '@material-ui/icons/Edit';
 import { Link } from "react-router-dom";
 import '../style.css';
+import ConfirmDelete from './ConfirmDelete'
 
 const useStyles = makeStyles({
     row: {
@@ -20,10 +20,15 @@ const useStyles = makeStyles({
 const CollapsibleRow = (props) => {
     const { row } = props;
     const [ open, setOpen ] = useState(false);
+    const [ openConfirmDelete, setOpenConfirmDelete ] = useState(false);
     const classes = useStyles();
 
     const capitalize = (str) => {
         return str.charAt(0).toUpperCase() + str.slice(1);
+    }
+
+    const onDelete = () => {
+      props.onDelete(row.id)
     }
 
     return (
@@ -45,12 +50,16 @@ const CollapsibleRow = (props) => {
                       <EditIcon />
                   </IconButton>
               </Link>
-              <IconButton style={{ color: 'red' }} onClick={() => props.onDelete(row.id)}>
-                  <DeleteIcon />
-              </IconButton>
+              <ConfirmDelete
+                title="Delete Confirmation"
+                message="Are you sure want to delete this record?"
+                onDelete={onDelete} 
+                {...{ openConfirmDelete, setOpenConfirmDelete }} 
+              />
             </div>
           </TableCell>
         </TableRow>
+
         <TableRow >
           <TableCell style={{ paddingBottom: 0, paddingTop: 0 }} colSpan={6}>
             <Collapse in={open} timeout="auto" unmountOnExit>
@@ -97,6 +106,7 @@ const CollapsibleRow = (props) => {
             </Collapse>
           </TableCell>
         </TableRow>
+        
       </Fragment>
     );
 }

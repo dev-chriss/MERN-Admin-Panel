@@ -18,7 +18,7 @@ const FormDialogDeleteUser = (props) => {
     setUserId(props.dataUser[0])
   }, [props.dataUser])
 
-  const handleClickOpen = () => {
+  const handleOpen = () => {
       setOpen(true);
   }
 
@@ -30,7 +30,7 @@ const FormDialogDeleteUser = (props) => {
       const onSuccess = () => {
           props.refresh()
           setOpen(false);
-          toast.success('Data succesfully updated');
+          toast.success('Data succesfully deleted');
       }
       e.preventDefault();
 
@@ -39,7 +39,7 @@ const FormDialogDeleteUser = (props) => {
 
   return (
     <div>
-      <IconButton style={{ color: 'red' }} onClick={handleClickOpen}>
+      <IconButton style={{ color: 'red' }} onClick={handleOpen}>
           <DeleteIcon />
       </IconButton>
       <Dialog  

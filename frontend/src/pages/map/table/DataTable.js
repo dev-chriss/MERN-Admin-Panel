@@ -33,9 +33,7 @@ const DataTable = ({ classes, ...props }) => {
             toast.success('Data succesfully deleted');
         }
 
-        if (window.confirm('Are you sure to delete this record?')) {
-            props.delete(id, onSuccess)
-        }
+        props.delete(id, onSuccess)
     }
 
     const handleChangePage = async (event, newPage) => {
