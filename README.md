@@ -18,6 +18,9 @@ npm run dev
 ## Frontend React
 
 ``` bash
+
+Copy .env.example to .env
+
 npm install
 npm run dev
 
