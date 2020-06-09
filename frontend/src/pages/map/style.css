@@ -1,0 +1,132 @@
+.collapse-cell-title {
+  border-bottom: none !important;
+  vertical-align: top !important;
+  font-weight: 600 !important;
+  padding-bottom: 0px !important;
+}
+
+.collapse-cell-content {
+  border-bottom: none !important;
+  vertical-align: top !important;
+  word-break : break-word;
+  padding-bottom: 0px !important;
+}
+
+.table-header {
+  display : flex;
+  align-items: center;
+  width: 100%;
+}
+
+.table-header > div:nth-child(1) {
+  flex: 1;
+}
+
+.table-header > div:nth-child(2) {
+  text-align: right;
+  margin: 20px;
+}
+
+.table-filter {
+  display : flex;
+  align-items: center;
+  justify-content: space-between;
+  /* width: 100%; */
+}
+
+.table-filter > div {
+  margin: 20px;
+  margin-bottom: 10px;
+  display : flex;
+  flex-direction: row;
+}
+
+.table-filter > div:nth-child(1) > div > .MuiOutlinedInput-input {
+  width: 300px;
+}
+
+.table-filter > div:nth-child(2) {
+  flex: 1
+}
+
+.table-filter > div:nth-child(2) > div > .MuiOutlinedInput-input {
+  width: 150px;
+}
+
+.cell-add > a> button > span > svg{
+  font-size: 2.5rem
+}
+
+.form-button-container {
+  display:flex;
+  flex-direction:row;
+  justify-content:flex-end;
+  width:100%;
+  margin: 20px 30px 30px;
+}
+
+.form-button-container > button:nth-child(2) {
+  margin-left: 15px;
+}
+
+@media only screen and (max-width: 768px) {
+  .DataTable-paper-63 {
+      margin: unset !important; 
+      padding: 20px !important;
+      padding-bottom: 0;
+  }
+  .makeStyles-pageTitleContainer-60 {
+    margin : 20px !important;
+    margin-bottom : 20px;
+    justify-content: center !important;
+  }
+  .makeStyles-content-2 {
+    padding: 0px !important;
+  }
+  .table-header {
+    flex-direction: column-reverse;
+    align-items: unset;
+  }
+  
+  .table-header > div:nth-child(2) {
+    text-align: left;
+  }
+  
+  .table-filter {
+    flex-direction: column;
+    align-items: unset;
+    width: 100%;
+  }
+  
+  .table-filter > div {
+    margin: 20px;
+    display : flex;
+    flex-direction: column;
+  }
+  
+  .table-filter > div:nth-child(1) > div > .MuiOutlinedInput-root {
+    border-radius: 10px;
+  }
+
+  .table-filter > div:nth-child(2) > div > .MuiOutlinedInput-input {
+    width: 100%;
+  }
+
+  .cell-button {
+    display: flex;
+    flex-direction: row;
+    padding-right: 20px;
+  }
+
+  .cell-add {
+    text-align: center;
+  }
+
+  /* .cell-button > button:nth-child(1) {
+    margin-bottom: 10px !important
+  } */
+
+  div.MuiToolbar-root.MuiToolbar-regular.MuiTablePagination-toolbar.MuiToolbar-gutters {
+    padding-right: 20px;
+  }
+}

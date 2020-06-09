@@ -1,0 +1,21 @@
+# API keys and secrets
+frontend/.env
+backend/.env
+
+# Dependency directory
+frontend/node_modules
+backend/node_modules
+
+# Editors
+.idea
+*.iml
+.vscode
+
+# OS metadata
+.DS_Store
+Thumbs.db
+frontend/package-lock.json
+backend/package-lock.json
+
+# Sublime Project Files
+*.sublime-*
