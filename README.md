@@ -34,7 +34,7 @@ npm run build
 
 
 #### Screenshoot
-![](https://ibb.co/XXtccs6)
+![](https://i.ibb.co/6YFjjPG/crud1.png)
 
 
 Info
