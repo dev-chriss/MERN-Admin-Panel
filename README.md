@@ -10,7 +10,7 @@ update MONGO_DB_NAME and JWT_SECRET on .env file
 # install dependencies
 npm install
 
-# serve with hot reload at localhost:8080
+# serve with hot reload at localhost:3000
 npm run dev
 
 ```
@@ -19,13 +19,13 @@ npm run dev
 
 ``` bash
 
-Copy .env.example to .env
+copy .env.example to .env
 
-npm install
-npm run dev
+yarn install
+yarn start
 
 # build for production with minification
-npm run build
+yarn build
 
 ```
 #### Feature
