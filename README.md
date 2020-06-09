@@ -31,9 +31,13 @@ yarn build
 #### Feature
 
 * Axios
+* Material UI
 * Authentication with JWT and React Context
-* CRUD with React Redux
-* 2 example of datatables
+* 2 CRUD example 
+  1. Using React Redux and React router
+  2. Using React Hooks and Dialog Form
+  
+* 2 example of datatables ([Table material UI](https://material-ui.com/components/tables/] and [mui-datatables](https://github.com/gregnb/mui-datatables))
 
 
 #### Screenshoot
