@@ -20,9 +20,9 @@
 
 #### 1. Copy .env.example to .env
 
-#### 2. Run `yarn/npm install`
+#### 2. Run `yarn install`
 
-#### 3. Run `yarn/npm start`
+#### 3. Run `yarn start`
 
 #### 4. Run `yarn build`
 
