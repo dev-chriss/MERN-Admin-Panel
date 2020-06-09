@@ -38,8 +38,8 @@ yarn build
     2. Using React Hooks to show Form Dialog
   
 * 2 example of datatables 
-    1. Using ([Table material UI](https://material-ui.com/components/tables/] 
-    2. Using [mui-datatables](https://github.com/gregnb/mui-datatables))
+    1. Using [Table material UI](https://material-ui.com/components/tables/)
+    2. Using [mui-datatables](https://github.com/gregnb/mui-datatables)
 
 
 #### Screenshoot
