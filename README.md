@@ -34,10 +34,12 @@ yarn build
 * Material UI
 * Authentication with JWT and React Context
 * 2 CRUD example 
-  1. Using React Redux and React router
-  2. Using React Hooks and Dialog Form
+    1. Using React router to change between pages and using React Redux for state management
+    2. Using React Hooks to show Form Dialog
   
-* 2 example of datatables ([Table material UI](https://material-ui.com/components/tables/] and [mui-datatables](https://github.com/gregnb/mui-datatables))
+* 2 example of datatables 
+    1. Using ([Table material UI](https://material-ui.com/components/tables/] 
+    2. Using [mui-datatables](https://github.com/gregnb/mui-datatables))
 
 
 #### Screenshoot
