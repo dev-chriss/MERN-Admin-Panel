@@ -8,9 +8,6 @@ import FormDialogEditUser from "../formDialog/FormDialogEditUser";
 import FormDialogDeleteUser from "../formDialog/FormDialogDeleteUser";
 
 const styles = theme => ({
-    paper: {
-        padding: theme.spacing(0),
-    },
     paperTable: {
         padding: theme.spacing(0),
     }
@@ -61,12 +58,36 @@ const UserTable = ({ classes, ...props }) => {
             }
         },
         {
+            // left side of first column is too close with the container, give more space on it
             name: "name",
             label: "Name",
             options: {
                 filter: true,
                 sort: false,
-            }
+                customHeadRender: (columnMeta, handleToggleColumn) => {
+                    return (
+                        <th key={columnMeta.index} 
+                            style={{
+                                paddingLeft: "31px", 
+                                fontWeight:500, 
+                                borderBottom: "1px solid rgba(224, 224, 224, .5)" 
+                                }}
+                        >
+                            <div style={{display:"flex", flexDirection:"row", justifyContent:"flex-start"}}>
+                                {columnMeta.label}
+                            </div>
+                        </th>
+                    );
+                },
+                customBodyRender: (value, tableMeta, updateValue) => {
+                    return (
+                        <span style={{marginLeft:15}}>
+                            {value}
+                        </span>
+                    );
+                }
+            },
+            
         },
         {
             name: "email",
@@ -164,7 +185,7 @@ const UserTable = ({ classes, ...props }) => {
     };
     
     return (
-        <MUIDataTable className={classes.paper}
+        <MUIDataTable className={classes.paperTable}
             data={props.users}
             columns={columns}
             options={options}

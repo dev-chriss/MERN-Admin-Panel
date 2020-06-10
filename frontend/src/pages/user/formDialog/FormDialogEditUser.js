@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import Button from "@material-ui/core/Button";
 import TextField from "@material-ui/core/TextField";
 import Dialog from "@material-ui/core/Dialog";
@@ -25,16 +25,13 @@ const FormDialogEditUser = (props) => {
   const [user, setUser] = useState(initialFormState);
   const [errors, setErrors ] = useState({})
 
-  useEffect(() => {
-    setUser({
-      id : props.dataUser[0],
-      name : props.dataUser[1],
-      email : props.dataUser[2]
-    })
-    setErrors({})
-  }, [props.dataUser])
-
   const handleClickOpen = () => {
+      setErrors({});
+      setUser({
+        id : props.dataUser[0],
+        name : props.dataUser[1],
+        email : props.dataUser[2]
+      })
       setOpen(true);
   }
 

@@ -27,6 +27,8 @@ const FormDialogAddUser = (props) => {
   const [errors, setErrors ] = useState({})
 
   const handleClickOpen = () => {
+      setErrors({});
+      setUser(initialFormState);
       setOpen(true);
   }
 
