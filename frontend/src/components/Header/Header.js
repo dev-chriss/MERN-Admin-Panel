@@ -32,12 +32,12 @@ import {
 import { AuthContext } from "../../context/AuthContext";
 
 export default function Header(props) {
-  const classes = useStyles();
-
   // global
+  const classes = useStyles();
+  const { logout, getAuthUser} = useContext(AuthContext)
+  
   const layoutState = useLayoutState();
   const layoutDispatch = useLayoutDispatch();
-  const { logout, getAuthUser} = useContext(AuthContext)
   const authUser = getAuthUser()
 
   // local

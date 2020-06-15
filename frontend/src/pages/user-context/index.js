@@ -11,10 +11,10 @@ const styles = theme => ({
     }
 })
 
-const Map = ({ classes, ...props }) => {
+const UserWithContext = ({ classes, ...props }) => {
     return (
         <React.Fragment>
-            <PageTitle title="Map (using redux)" />
+            <PageTitle title="User (using context)" />
             <Grid container spacing={4}>
                 <DataTable />
             </Grid>
@@ -22,4 +22,4 @@ const Map = ({ classes, ...props }) => {
     );
 }
 
-export default (withStyles(styles)(Map));
+export default (withStyles(styles)(UserWithContext));

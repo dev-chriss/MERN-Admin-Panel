@@ -28,10 +28,11 @@ import {
 const structure = [
   { id: 0, label: "Dashboard", link: "/admin/dashboard", icon: <HomeIcon /> },
   { id: 1, label: "User", link: "/admin/user", icon: <AccountIcon /> },
-  { id: 2, label: "Map", link: "/admin/map", icon: <PublicIcon /> },
-  { id: 3, type: "divider" },
-  { id: 4, type: "title", label: "SETTINGS" },
-  { id: 5, label: "Documents", link: "", icon: <LibraryIcon /> },
+  { id: 2, label: "User (context)", link: "/admin/usercontext", icon: <AccountIcon /> },
+  { id: 3, label: "Map (redux)", link: "/admin/map", icon: <PublicIcon /> },
+  { id: 4, type: "divider" },
+  { id: 5, type: "title", label: "SETTINGS" },
+  { id: 6, label: "Documents", link: "", icon: <LibraryIcon /> },
 ];
 
 function Sidebar({ location }) {

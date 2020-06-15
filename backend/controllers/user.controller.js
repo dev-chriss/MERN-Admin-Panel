@@ -11,7 +11,6 @@ const usersSerializer = data => ({
 exports.findAll =  (req, res) => {
     User.find()
     .then(async data => {
-        console.log(data)
         const users = await Promise.all(data.map(usersSerializer));
         res.send(users);
     }).catch(err => {
@@ -24,7 +23,6 @@ exports.findAll =  (req, res) => {
 // Retrieve data with pagination
 exports.findPagination = async (req, res) => {
     const { page = 1, limit = 5, name = "", email = "" } = req.query;
-    console.log(req.query)
 
     let query = {}
     if (email && email !== "null") {
@@ -39,8 +37,6 @@ exports.findPagination = async (req, res) => {
     else if (name && name !== "null") {
         query = { name: new RegExp(`${name}+`, "i") }
     }
-
-    // console.log(query)
 
     const paginated = await User.paginate(
         query,

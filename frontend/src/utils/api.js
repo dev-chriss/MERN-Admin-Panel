@@ -42,7 +42,7 @@ export default {
 
       return {
           fetchAll: () => http.get(url + '/list', config),
-          fetchPagination: (page, limit, name, email) => 
+          fetchPagination: (page, limit = 10, name = null, email = null) => 
               http.get(url + "?page=" + page + "&limit=" + limit + "&name=" + name + "&email=" + email, config),
           fetchById: id => http.get(url + "/" + id, config),
           create: newRecord => http.post(url, newRecord, config),

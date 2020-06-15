@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import { HashRouter, Route, Switch, Redirect } from "react-router-dom";
 
 // components
-import Layout from "./components/Layout/Layout";
+import AdminLayout from "./components/Layout/AdminLayout";
 // pages
 import Error from "./pages/error/Error";
 import Login from "./pages/login/Login";
@@ -32,13 +32,13 @@ export default function App() {
         draggable={false}
         pauseOnHover={false}
       />
-
+      
       <HashRouter>
           <Switch>
             <Route exact path="/" render={() => <Redirect to="/admin/dashboard" />} />
             <Route exact path="/admin" render={() => <Redirect to="/admin/dashboard" />} />
             <Route path="/login" component={Login} />
-            <ProtectedRoute path="/admin" component={Layout} />
+            <ProtectedRoute path="/admin" component={AdminLayout} />
             <Route component={Error} />
           </Switch>
       </HashRouter>

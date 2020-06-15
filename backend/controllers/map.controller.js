@@ -28,7 +28,6 @@ exports.findAll =  (req, res) => {
 // Retrieve data with pagination
 exports.findPagination = async (req, res) => {
     const { page = 1, limit = 4, name = "", category = "all" } = req.query;
-    // console.log(req.query)
 
     let query = {}
     if (category && category.toLowerCase() !== "all") {
