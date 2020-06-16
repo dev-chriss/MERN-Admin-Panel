@@ -22,6 +22,8 @@ npm run dev
 copy .env.example to .env
 
 yarn install
+
+# run at localhost:8000
 yarn start
 
 # build for production with minification
